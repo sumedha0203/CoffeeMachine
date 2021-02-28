@@ -49,12 +49,16 @@ public class BeverageController {
 
             for (Beverage beverage : beverageList) {
                 // if used outlets are max outlets in a machine, break the loop.
-                if(usedOutlets == machine.getOutlets())
-                    break;
+                if(usedOutlets == machine.getOutlets()) {
+                    System.out.println("Cannot dispense " + beverage.getName() + " as all outlets are occupied.");
+                    continue;
+                }
                 usedOutlets = beverageService.disperseBeverage(beverage, machine) ? usedOutlets + 1: usedOutlets;
             }
+            System.out.println();
             // check ingredients which are running low
             beverageService.checkLowIngredients(machine);
+            System.out.println();
         } catch (CustomException e) {
             System.out.println(e.getMessage());
         } catch (FileNotFoundException e) {

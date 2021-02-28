@@ -7,7 +7,7 @@
       "hot_water": 500,
       "hot_milk": 500,
       "ginger_syrup": 100,
-      "sugar_syrup": 100,
+      "sugar_syrup": 200,
       "tea_leaves_syrup": 100
     },
     "beverages": {
@@ -36,6 +36,18 @@
         "ginger_syrup": 30,
         "sugar_syrup": 50,
         "green_mixture": 30
+      },
+      "ginger_tea": {
+        "hot_water": 100,
+        "ginger_syrup": 30,
+        "sugar_syrup": 50,
+        "tea_leaves_syrup": 30
+      },
+      "tulsi_tea": {
+        "hot_water": 100,
+        "ginger_syrup": 30,
+        "sugar_syrup": 50,
+        "tea_leaves_syrup": 30
       }
     }
   }

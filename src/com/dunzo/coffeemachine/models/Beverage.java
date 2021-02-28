@@ -7,20 +7,20 @@ import java.util.List;
  */
 public class Beverage {
 
-    private String beverage;
+    private String name;
     private List<Ingredient> ingredients;
 
-    public Beverage(String beverage, List<Ingredient> ingredients) {
-        this.beverage = beverage;
+    public Beverage(String name, List<Ingredient> ingredients) {
+        this.name = name;
         this.ingredients = ingredients;
     }
 
-    public String getBeverage() {
-        return beverage;
+    public String getName() {
+        return name;
     }
 
-    public void setBeverage(String beverage) {
-        this.beverage = beverage;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<Ingredient> getIngredients() {

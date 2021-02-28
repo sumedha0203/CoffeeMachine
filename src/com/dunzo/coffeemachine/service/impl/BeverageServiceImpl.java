@@ -24,11 +24,11 @@ public class BeverageServiceImpl implements BeverageService {
         for (Ingredient ingredient : ingredientsList) {
             if (machine.getInventory().containsKey(ingredient.getName())) {
                 if (ingredient.getQuantity() > machine.getInventory().get(ingredient.getName())) {
-                    System.out.println(beverage.getBeverage() + " cannot be prepared because " + ingredient.getName() + " is not sufficient.");
+                    System.out.println(beverage.getName() + " cannot be prepared because " + ingredient.getName() + " is not sufficient.");
                     return false;
                 }
             } else {
-                System.out.println(beverage.getBeverage() + " cannot be prepared because " + ingredient.getName() + " is not available.");
+                System.out.println(beverage.getName() + " cannot be prepared because " + ingredient.getName() + " is not available.");
                 return false;
             }
         }
@@ -37,7 +37,7 @@ public class BeverageServiceImpl implements BeverageService {
             machine.getInventory().put(usedIng.getName(),updatedQuantity);
         }
 
-        System.out.println(beverage.getBeverage() + " is prepared.");
+        System.out.println(beverage.getName() + " is prepared.");
         return true;
     }
 
